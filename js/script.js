@@ -37,14 +37,13 @@ function setWay() {
 
 
 
-const showDistance = document.getElementById('distance');
-
-
+const showDistance = document.getElementById('sumdistance');
 
 
 btn.addEventListener('click', () => {
   if (ways.value === 'Херсон - Киев - Москва') {
-    console.log(distance.khersonToKiyv + distance.KiyvToMoscow);
+    let elem = distance.khersonToKiyv + distance.KiyvToMoscow;
+    btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem + ' километров');
   } else if (ways.value === 'Херсон - Одесса - Киев - Москва') {
     console.log(distance.khersonToOdessa + distance.OdessaToKiyv + distance.KiyvToMoscow);
   } else if (ways.value === 'Херсон - Киев - Минск - Берлин') {
