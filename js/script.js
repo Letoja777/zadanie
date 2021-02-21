@@ -71,5 +71,3 @@ const distance = {
         "MoscowToBerlin": 1814,
         "MinskToBerlin": 1112
 };
-
-
