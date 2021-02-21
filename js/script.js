@@ -45,11 +45,14 @@ btn.addEventListener('click', () => {
     let elem = distance.khersonToKiyv + distance.KiyvToMoscow;
     btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem + ' километров');
   } else if (ways.value === 'Херсон - Одесса - Киев - Москва') {
-    console.log(distance.khersonToOdessa + distance.OdessaToKiyv + distance.KiyvToMoscow);
+    let elem2 = distance.khersonToOdessa + distance.OdessaToKiyv + distance.KiyvToMoscow;
+    btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem2 + ' километров');
   } else if (ways.value === 'Херсон - Киев - Минск - Берлин') {
-    console.log(distance.khersonToKiyv + distance.KiyvToMinsk + distance.MinskToBerlin);
+    let elem3 = distance.khersonToKiyv + distance.KiyvToMinsk + distance.MinskToBerlin;
+    btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem3 + ' километров');
   } else if (ways.value === 'Херсон - Киев - Москва- Берлин')  {
-    console.log(distance.khersonToKiyv + distance.KiyvToMoscow + distance.MoscowToBerlin);
+    let elem4 = distance.khersonToKiyv + distance.KiyvToMoscow + distance.MoscowToBerlin
+    btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem4 + ' километров');
   }
     else {
       for (let i = 0; i < 1; i++) {
