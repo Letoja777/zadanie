@@ -12,6 +12,8 @@ const ways = document.getElementById("list2");
 
 const btn = document.getElementById('button');
 
+const showDistance = document.getElementById('sumdistance');
+
 //вешаем обработчики события CHANGE в выпадающем списке:
 select.addEventListener('change', setWay);
 select2.addEventListener('change', setWay);
@@ -35,24 +37,23 @@ function setWay() {
   }
 }
 
-
-
-const showDistance = document.getElementById('sumdistance');
-
-
 btn.addEventListener('click', () => {
   if (ways.value === 'Херсон - Киев - Москва') {
     let elem = distance.khersonToKiyv + distance.KiyvToMoscow;
     btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem + ' километров');
+    console.log(JSON.stringify('Херсон - Киев - Москва'));
   } else if (ways.value === 'Херсон - Одесса - Киев - Москва') {
     let elem2 = distance.khersonToOdessa + distance.OdessaToKiyv + distance.KiyvToMoscow;
     btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem2 + ' километров');
+    console.log(JSON.stringify('Херсон - Одесса - Киев - Москва'));
   } else if (ways.value === 'Херсон - Киев - Минск - Берлин') {
     let elem3 = distance.khersonToKiyv + distance.KiyvToMinsk + distance.MinskToBerlin;
     btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem3 + ' километров');
+    console.log(JSON.stringify('Херсон - Киев - Минск - Берлин'));
   } else if (ways.value === 'Херсон - Киев - Москва- Берлин')  {
     let elem4 = distance.khersonToKiyv + distance.KiyvToMoscow + distance.MoscowToBerlin
     btn.insertAdjacentHTML("afterend", '<p> Расстояние выбранного маршрута составит</p>'+ elem4 + ' километров');
+    console.log(JSON.stringify('Херсон - Киев - Москва- Берлин'));
   }
     else {
       for (let i = 0; i < 1; i++) {
